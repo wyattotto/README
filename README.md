@@ -4,7 +4,7 @@
 
 ## Description
 
-Use this programe to make ReadMes for your next project!
+Use this program to make ReadMes for your next project!
 
 ## Languages used
 
