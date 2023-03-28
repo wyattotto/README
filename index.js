@@ -1,9 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require(`fs`)
-const MrkDown = require('./MrkDown.js');
+const MrkDown = require('./assets/MrkDown.js');
 const { resolve } = require('path');
-const filename = 'README.md'
+const filename = 'README1.md'
 // TODO: Create an array of questions for user input
 const questions = [
     {

@@ -1,11 +1,5 @@
 const fs = require('fs');
 
-// function badge (license) {
-//     if (license != "none"){
-//     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]](https://opensource.org/licenses/MIT)`}
-//     return ``
-// }
-
 const LicenseBadge = (license) => {
     if (license === "MIT") {
         return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
@@ -19,7 +13,6 @@ const LicenseBadge = (license) => {
     if (license === "Mozilla Public License 2.0") {
         return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
     }
-
 }
 
 function RenderedLicense(license){
@@ -36,7 +29,8 @@ function generateMarkdown(data){
    
     const badge =  LicenseBadge(data.license)
     const license = RenderedLicense(data.license)
-    return`${badge}
+    return`
+${badge}
 
 # ${data.title}
 
@@ -76,8 +70,9 @@ ${data.language}
   ${data.test}
 
 ## Contact 
-  ${data.username}
-  ${data.email}
+  GitHub Username:  ${data.username}
+
+  Email: ${data.email}
 
  ${license}
 
