@@ -23,6 +23,11 @@ const questions = [
         message: "What is the description of your Project?",
     },
     {
+    type: "input",
+    name: "language",
+    message: "What types of Languages are used for your Project?",
+    },
+    {
         type: "input",
         name: "installation",
         message:"Enter Installation instructions here."

@@ -6,14 +6,9 @@ const fs = require('fs');
 //     return ``
 // }
 
-
-
-
-
-
 const LicenseBadge = (license) => {
     if (license === "MIT") {
-        return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]](https://opensource.org/licenses/MIT)`
+        return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
     }
     if (license === "CC-0") {
         return `[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)`
@@ -42,11 +37,16 @@ function generateMarkdown(data){
     const badge =  LicenseBadge(data.license)
     const license = RenderedLicense(data.license)
     return`${badge}
-    # ${data.title}
+
+# ${data.title}
 
 ## Description
 
 ${data.description}
+
+## Languages used
+
+${data.language}
 
 ## Table of Contents
   
@@ -76,10 +76,9 @@ ${data.description}
   ${data.test}
 
 ## Contact 
-  ${data.github}
+  ${data.username}
   ${data.email}
 
-## License
  ${license}
 
 `;
